@@ -1,6 +1,8 @@
 ﻿@inherits LayoutComponentBase
 
-<MudThemeProvider />
+@* Eget theme*@
+<MudThemeProvider Theme="_MyTheme"></MudThemeProvider>
+
 <MudPopoverProvider />
 <MudDialogProvider />
 <MudSnackbarProvider />
@@ -20,7 +22,9 @@
     </MudMainContent>
 </MudLayout>
 
-@code {
+    @code {
+    private MyTheme _MyTheme = new MyTheme();
+
     bool _drawerOpen = true;
 
     void DrawerToggle()
