@@ -18,7 +18,8 @@ namespace Flashcard.Components.Layout
                 AppbarBackground = "#FF8F00",
 
                 DrawerBackground = "#FFCAA0",
-                DrawerText = "#191B1C"
+                DrawerText = "#191B1C",
+                DrawerIcon = "#191B1C"
             };
         }
     }
