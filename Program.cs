@@ -1,13 +1,21 @@
 using Flashcard.Components;
+using Flashcard.Data;
+using Microsoft.EntityFrameworkCore;
 using MudBlazor.Services;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Get the connectionstring from appsettings.json
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
 builder.Services.AddMudServices();
+
+builder.Services.AddDbContext<FlashcardDbContext>(options =>
+    options.UseSqlServer(connectionString));
 
 var app = builder.Build();
 
