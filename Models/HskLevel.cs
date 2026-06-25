@@ -9,7 +9,7 @@ namespace Flashcard.Models
         [MaxLength(50)]
         public required string Name { get; set; }
 
-        public List<Word> Words { get; set; } = new List<Word>();
+        public ICollection<Word> Words { get; set; } = new List<Word>();
 
     }
 }
