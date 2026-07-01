@@ -1,19 +1,63 @@
 ﻿@page "/Practice"
 @rendermode InteractiveServer
 
-<PageTitle>Counter</PageTitle>
+<PageTitle>Practice</PageTitle>
 
-<h1>Practice</h1>
+<MudContainer Class="mt-16">
+    <MudText Typo="Typo.h3" Align="Align.Center" GutterBottom="true">Välj HSK nivå</MudText>
+    <MudText Align="Align.Center">Gå vidare för att träna flashcards genom att välja vilken HSK nivå du vill träna.</MudText>
+    <MudGrid Class="mt-8">
 
-<p role="status">Current count: @currentCount</p>
+        @* HSK 1 *@
+        <MudItem xs="12" sm="6" md="4">
+            <MudCard Elevation="25" Class="rounded-lg pb-4">
+                <MudCardHeader>
+                    <CardHeaderContent>
+                        <MudText Typo="Typo.h5" Align="Align.Center">HSK 1</MudText>
+                    </CardHeaderContent>
+                </MudCardHeader>
+                <MudCardContent>
+                    <MudText Typo="Typo.body1" Align="Align.Center">HSK 1 är den första nivån som innehåller 300 ord.</MudText>
+                </MudCardContent>
+                <MudCardActions Class="d-flex justify-center">
+                    <MudButton Variant="Variant.Filled" Color="Color.Primary" Size="Size.Large" Style="width:50%;">Börja</MudButton>
+                </MudCardActions>
+            </MudCard>
+        </MudItem>
 
-<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+        @* HSK 2 *@
+        <MudItem xs="12" sm="6" md="4">
+            <MudCard Elevation="25" Class="rounded-lg pb-4">
+                <MudCardHeader>
+                    <CardHeaderContent>
+                        <MudText Typo="Typo.h5" Align="Align.Center">HSK 2</MudText>
+                    </CardHeaderContent>
+                </MudCardHeader>
+                <MudCardContent>
+                    <MudText Typo="Typo.body1" Align="Align.Center">HSK 2 är den andra nivån som innehåller 200 ytterligare ord.</MudText>
+                </MudCardContent>
+                <MudCardActions Class="d-flex justify-center">
+                    <MudButton Variant="Variant.Filled" Color="Color.Primary" Size="Size.Large" Style="width:50%;">Börja</MudButton>
+                </MudCardActions>
+            </MudCard>
+        </MudItem>
 
-@code {
-    private int currentCount = 0;
+        @* HSK 3 *@
+        <MudItem xs="12" sm="6" md="4">
+            <MudCard Elevation="25" Class="rounded-lg pb-4">
+                <MudCardHeader>
+                    <CardHeaderContent>
+                        <MudText Typo="Typo.h5" Align="Align.Center">HSK 3</MudText>
+                    </CardHeaderContent>
+                </MudCardHeader>
+                <MudCardContent>
+                    <MudText Typo="Typo.body1" Align="Align.Center">HSK 2 är den andra nivån som innehåller 500 ytterligare ord.</MudText>
+                </MudCardContent>
+                <MudCardActions Class="d-flex justify-center">
+                    <MudButton Variant="Variant.Filled" Color="Color.Primary" Size="Size.Large" Style="width:50%;">Börja</MudButton>
+                </MudCardActions>
+            </MudCard>
+        </MudItem>
+    </MudGrid>
+</MudContainer>
 
-    private void IncrementCount()
-    {
-        currentCount++;
-    }
-}
